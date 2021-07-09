@@ -35,7 +35,7 @@ stage ('Build')
 {
     steps
     {
-        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/${Service_name}; sudo docker build -t account-service . " 
+        sh "cd /home/ubuntu/jenkins/workspace/Jenkins-Pipeline-java-ms/${Service_name}; sudo docker build -t account-service . " 
     }
 }
     }
@@ -43,9 +43,9 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo  docker login -uankit1111 -pmiet@1234 "
-        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo docker tag account-service ankit1111/$(Service_name)  "
-        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo docker push ankit1111/$(Service_name)  "
+       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo  docker login -mk72-vision2020 "
+        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo docker tag account-service mk72/$(Service_name)  "
+        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline-java-ms/$(Service_name) ; sudo docker push mk72/$(Service_name)  "
         
         
     }
