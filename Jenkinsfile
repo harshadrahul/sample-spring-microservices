@@ -30,7 +30,7 @@ stage ('Build')
     }
 }
     }
-            stage ('dockerimagepush ') 
+            stage ('dockerimagepush') 
 {
     steps
     {
@@ -42,14 +42,4 @@ stage ('Build')
     }
 }
     
-    
-stage ('k8sdeployment') 
-    {
-        steps {
-            node (' Ansible-server') {
-             sh " sudo ansible-playbook /root/k8s.yaml"
-   
-    }
-}
-}
 }  
