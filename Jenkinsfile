@@ -52,7 +52,5 @@ stage ('k8sdeployment')
     }
 }
 }
-}
-    
-    
+}  
 }
