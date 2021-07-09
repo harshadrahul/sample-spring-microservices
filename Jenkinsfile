@@ -33,7 +33,7 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/jenkins/workspace/final_project/account-service ; sudo  docker login -mk72-vision2020 "
+       sh "cd /home/ubuntu/jenkins/workspace/final_project/account-service ; sudo  docker login -u mk72 -p vision2020"
         sh "cd /home/ubuntu/jenkins/workspace/final_project/account-service ; sudo docker tag account-service mk72/account-service  "
         sh "cd /home/ubuntu/jenkins/workspace/final_project/account-service ; sudo docker push mk72/account-service  "
         
